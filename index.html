@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-headline">
+    <!-- Slide Down Bar -->
+    <header
+      id="navbar"
+      class="px-7 py-5 z-10 flex justify-between items-center bg-white text-gray-900 shadow-2xl"
+    >
+      <a href="#">
+        <div class="flex items-center cursor-pointer">
+          <img src="img/slack.svg" alt="slack logo" />
+          <h1 class="ml-1 text-2xl font-semibold">slack</h1>
+        </div>
+      </a>
+      <div>
+        <ion-icon
+          class="mr-5 text-2xl cursor-pointer"
+          name="search-outline"
+        ></ion-icon>
+        <ion-icon
+          onclick="openNav()"
+          class="text-2xl cursor-pointer"
+          name="menu-outline"
+        ></ion-icon>
+      </div>
+    </header>
+
+    <!-- HEADER WIDE -->
+    <header class="hidden lg:block">
+      <div
+        class="px-7 py-5 flex justify-between items-center bg-brand text-white"
+      >
+        <div class="flex items-center gap-7">
+          <div>
+            <a class="flex items-center" href="#">
+              <img src="img/slack.svg" alt="slack logo" />
+              <h1 class="ml-1 text-2xl font-semibold">slack</h1>
+            </a>
+          </div>
+          <div>
+            <p class="flex items-center gap-1 text-sm font-semibold">
+              Product <ion-icon name="chevron-down-outline"></ion-icon>
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Solutions</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Enterprise</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Resources</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Pricing</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between gap-7">
+          <ion-icon
+            class="mr-5 text-2xl cursor-pointer"
+            name="search-outline"
+          ></ion-icon>
+          <div>
+            <p class="text-sm font-semibold">Sign in</p>
+          </div>
+          <div
+            class="px-3 py-2 bg-white text-brand text-center rounded-sm shrink cursor-pointer"
+          >
+            <a class="uppercase text-base font-semibold">Try for free</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HEADER -->
+
+    <header
+      class="px-7 py-5 flex justify-between items-center bg-brand text-white lg:hidden"
+    >
+      <a href="#">
+        <div class="flex items-center cursor-pointer">
+          <img src="img/slack.svg" alt="slack logo" />
+          <h1 class="ml-1 text-2xl font-semibold">slack</h1>
+        </div>
+      </a>
+      <div>
+        <ion-icon
+          class="mr-5 text-2xl cursor-pointer"
+          name="search-outline"
+        ></ion-icon>
+        <ion-icon
+          onclick="openNav()"
+          class="text-2xl cursor-pointer"
+          name="menu-outline"
+        ></ion-icon>
+      </div>
+    </header>
+
+    <!-- Side Navigation -->
+    <div
+      id="mySidenav"
+      class="sidenav bg-gray-50 top-0 right-0 overflow-x-hidden z-1 fixed"
+    >
+      <div class="px-7 py-5 flex justify-between">
+        <a class="flex items-center cursor-pointer" href="index.html">
+          <img class="h-10" src="img/slack.svg" alt="slack logo" />
+          <h1 class="ml-2 text-3xl font-bold">slack</h1>
+        </a>
+        <a href="javascript:void(0)" class="text-3xl" onclick="closeNav()"
+          >&times;</a
+        >
+      </div>
+      <div class="sidenav-items">
+        <a href="#">Product</a>
+        <a href="#">Solutions</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Resources</a>
+        <a href="#">Pricing</a>
+        <a href="#">Sign in</a>
+      </div>
+
+      <div
+        class="absolute w-full min-w-[401px] bottom-0 px-7 py-10 bg-white shadow-2xl"
+      >
+        <div
+          class="mb-4 py-4 bg-white text-center rounded-sm border border-brand cursor-pointer"
+        >
+          <a class="uppercase text-base text-brand font-semibold">Sign in</a>
+        </div>
+        <div
+          class="py-4 bg-brand-light hover:bg-brand text-center rounded-sm cursor-pointer"
+        >
+          <a class="uppercase text-base text-white font-semibold"
+            >Download Slack</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section -->
+
+    <main>
+      <div class="grid md:grid-cols-12 md:pb-20 bg-brand sm:px-7 md:px-0">
+        <article
+          class="md:col-span-7 px-4 pt-6 pb-8 bg-brand sm:px-0 md:pr-6 md:pl-10"
+        >
+          <h1
+            class="pb-3 text-center text-4xl font-bold text-white sm:text-5xl md:text-left md:text-6xl"
+          >
+            Great teamwork starts with a
+            <span class="text-yellow-500">digital HQ</span>
+          </h1>
+          <p
+            class="px-14 mb-14 text-center text-base text-white sm:text-lg md:text-left md:px-0"
+          >
+            With all your people, tools and communication in one place, you can
+            work faster and more flexibly than ever before.
+          </p>
+          <div
+            class="py-4 bg-white text-brand text-center rounded-sm shrink cursor-pointer"
+          >
+            <a class="uppercase text-base font-semibold">Try for free</a>
+          </div>
+        </article>
+
+        <div
+          class="md:col-span-5 md:my-14 grid place-items-center px-12 py-16 bg-brand-dark"
+        >
+          <img
+            class="sm:max-w-[400px]"
+            src="img/undraw_team_collaboration_re_ow29.svg"
+            alt="illustration of teamwork"
+          />
+        </div>
+      </div>
+
+      <article class="pt-10 pb-12 bg-orange-100">
+        <p class="px-4 pb-6 text-center text-base text-gray-900 font-semibold">
+          TRUSTED BY COMPANIES ALL OVER THE WORLD
+        </p>
+
+        <!-- Logos -->
+        <div class="px-4 pb-14">
+          <div class="pb-4 flex justify-around">
+            <img class="h-14" src="img/figma.svg" alt="figma logo" />
+            <img class="h-14" src="img/microsoft.svg" alt="microsoft logo" />
+            <img class="h-14" src="img/netflix.svg" alt="netflix logo" />
+          </div>
+          <div class="flex justify-evenly">
+            <img
+              class="h-14"
+              src="img/playstation.svg"
+              alt="playstation logo"
+            />
+            <img class="h-14" src="img/twitter.svg" alt="twitter logo" />
+          </div>
+        </div>
+
+        <!-- Features Side Tabs -->
+
+        <div class="mb-24">
+          <div class="mb-10 px-7 py-7 w-11/12 bg-cyan-400 rounded-r-full">
+            <img
+              src="img/undraw_chatting_re_j55r.svg"
+              alt="team chatting on phone illustration"
+            />
+          </div>
+          <h2 class="mb-5 px-4 text-3xl font-bold">Bring your team together</h2>
+          <p class="mb-5 px-4 text-base text-gray-700">
+            At the heart of Slack are channels: organized spaces for everyone
+            and everything you need for work. In channels, it’s easier to
+            connect across departments, offices, time zones and even other
+            companies.
+          </p>
+          <a class="px-4 text-base font-semibold text-cyan-800" href="#"
+            >Learn more about channels</a
+          >
+        </div>
+
+        <div class="mb-24">
+          <div class="flex justify-end">
+            <div class="mb-10 px-11 py-11 w-11/12 bg-green-500 rounded-l-full">
+              <img
+                src="img/undraw_video_call_re_4p26.svg"
+                alt="video call illustration"
+              />
+            </div>
+          </div>
+          <h2 class="mb-5 px-4 text-3xl font-bold">
+            Choose how you want to work
+          </h2>
+          <p class="mb-5 px-4 text-base text-gray-700">
+            In Slack, you’ve got all the flexibility to work when, where and how
+            it’s best for you. You can easily chat, send audio and video clips,
+            or hop on a huddle to talk things out live.
+          </p>
+          <a class="px-4 text-base font-semibold text-cyan-800" href="#"
+            >Learn more about flexible communication</a
+          >
+        </div>
+
+        <div>
+          <div class="mb-10 px-16 py-16 w-11/12 bg-yellow-500 rounded-r-full">
+            <img
+              src="img/undraw_connecting_teams_re_hno7 (1).svg"
+              alt="connecting team illustration"
+            />
+          </div>
+          <h2 class="mb-5 px-4 text-3xl font-bold">
+            Move faster with your tools in one place
+          </h2>
+          <p class="mb-5 px-4 text-base text-gray-700">
+            With your other work apps connected to Slack, you can work faster by
+            switching tabs less. And with powerful tools like Workflow Builder,
+            you can automate away routine tasks.
+          </p>
+          <a class="px-4 text-base font-semibold text-cyan-800" href="#"
+            >Learn more about the Slack platform</a
+          >
+        </div>
+      </article>
+
+      <!-- BG-WHITE SECTION -->
+      <article class="pt-20 pb-4">
+        <div class="mb-20 px-4">
+          <h2 class="mb-6 text-center text-4xl font-semibold">
+            Teams large and small rely on Slack
+          </h2>
+          <p class="mb-6 text-center text-base text-gray-700">
+            Slack securely scales up to support collaboration at the world’s
+            biggest companies.
+          </p>
+          <div
+            class="mb-4 py-4 bg-brand-light text-white text-center rounded-sm shrink-a cursor-pointer uppercase text-base font-semibold"
+          >
+            <a>Meet Slack for Enterprise</a>
+          </div>
+
+          <div
+            class="py-4 bg-white text-brand text-center rounded-sm shrink-b cursor-pointer border border-brand"
+          >
+            <a class="uppercase text-base font-semibold">Talk to Sales</a>
+          </div>
+        </div>
+
+        <!-- PERCENTAGES -->
+        <div class="mb-20 flex flex-col items-center gap-10">
+          <div class="w-1/2">
+            <span
+              class="mb-2 block text-center text-5xl font-bold text-brand-light"
+              >85%</span
+            >
+            <p class="text-center text-sm">
+              of users say Slack has improved communication*
+            </p>
+          </div>
+
+          <div class="w-1/2">
+            <span
+              class="mb-2 block text-center text-5xl font-bold text-brand-light"
+              >86%</span
+            >
+            <p class="text-center text-sm">
+              feel their ability to work remotely has improved*
+            </p>
+          </div>
+
+          <div class="w-1/2">
+            <span
+              class="mb-2 block text-center text-5xl font-bold text-brand-light"
+              >88%</span
+            >
+            <p class="text-center text-sm">
+              feel more connected to their teams*
+            </p>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div
+          class="relative mb-20 w-11/12 bg-red-200 rounded-r-full overflow-hidden"
+        >
+          <img
+            class="object-cover"
+            src="img/austin-distel-rxpThOwuVgE-unsplash.jpg"
+            alt="video of public speaker"
+          />
+          <a href="#">
+            <div
+              class="grid place-items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-16 w-24 bg-cyan-400 rounded-lg hover:bg-cyan-700"
+            >
+              <div class="w-0 h-0 border-solid triangle-right"></div>
+            </div>
+          </a>
+        </div>
+
+        <!-- QUOTE -->
+        <div class="mb-20 px-4">
+          <p class="mb-4 text-xl italic">
+            “We were able to create a large virtual network of employees that
+            can communicate as though they are together. There was a lot of
+            disruption in terms of where we worked, but in terms of how we
+            worked—very little disruption.”
+          </p>
+
+          <p class="font-bold">Mark Smith</p>
+          <p class="mb-4 text-sm font-semibold">
+            Senior Technical Product Manager, T-Mobile
+          </p>
+
+          <a class="text-base font-semibold text-cyan-800" href="#"
+            >See more customer stories &rarr;</a
+          >
+        </div>
+
+        <!-- Bottom of article -->
+        <p class="px-4 text-center text-sm text-gray-700">
+          * Weighted average. Based on 2,707 survey responses from weekly Slack
+          users in the U.S., UK, Australia and Canada with a ± 2% margin of
+          error at 95% CI (December 2021).
+        </p>
+      </article>
+
+      <!-- CARD SECTION -->
+
+      <article class="pt-10 pb-10 bg-orange-100">
+        <h2 class="px-4 pb-6 text-center text-2xl text-gray-900 font-bold">
+          Take a deeper dive into a new way to work
+        </h2>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <!-- Card 1 -->
+          <div class="mySlides fade">
+            <div
+              class="flex flex-col justify-between w-[285px] h-[420px] mx-auto py-6 px-4 bg-brand text-white rounded-sm"
+            >
+              <div>
+                <p class="mb-2 text-sm">Collection</p>
+                <h2 class="text-xl font-semibold">Slack as your digital HQ</h2>
+              </div>
+              <img
+                class="h-204"
+                src="img/undraw_in_sync_re_jlqd.svg"
+                alt="People and technology in sync illustration"
+              />
+              <div class="flex justify-between items-center">
+                <p class="font-semibold">SEE ALL</p>
+                <ion-icon
+                  class="text-xl"
+                  name="arrow-forward-outline"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mySlides fade">
+            <div
+              class="flex flex-col justify-between w-[285px] h-[420px] mx-auto py-6 px-4 bg-white rounded-sm"
+            >
+              <img
+                class="h-[204px] bg-orange-100"
+                src="img/undraw_building_blocks_re_5ahy.svg"
+                alt="People building web"
+              />
+              <div>
+                <p class="mb-2 text-sm">Resource</p>
+                <h2 class="text-xl font-semibold">
+                  See how others are building their digital HQ
+                </h2>
+              </div>
+              <div class="flex justify-between items-center text-cyan-800">
+                <p class="font-semibold">READ MORE</p>
+                <ion-icon
+                  class="text-xl"
+                  name="arrow-forward-outline"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="mySlides fade">
+            <div
+              class="flex flex-col justify-between w-[285px] h-[420px] mx-auto py-6 px-4 bg-white rounded-sm"
+            >
+              <img
+                class="h-[204px] bg-cyan-700"
+                src="img/undraw_world_re_768g.svg"
+                alt="Find talent around the world illustration"
+              />
+              <div>
+                <p class="mb-2 text-sm">Webinar</p>
+                <h2 class="text-xl font-semibold">
+                  Win the battle for talent with a digital HQ
+                </h2>
+              </div>
+              <div class="flex justify-between items-center text-cyan-800">
+                <p class="font-semibold">WATCH NOW</p>
+                <ion-icon
+                  class="text-xl"
+                  name="arrow-forward-outline"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="mySlides fade">
+            <div
+              class="flex flex-col justify-between w-[285px] h-[420px] mx-auto py-6 px-4 bg-white rounded-sm"
+            >
+              <img
+                class="h-[204px] bg-brand"
+                src="img/undraw_online_chat_re_c4lx.svg"
+                alt="Happy emojis illustration"
+              />
+              <div>
+                <p class="mb-2 text-sm">E-book</p>
+                <h2 class="text-xl font-semibold">
+                  Reinventing work: New imperatives for the future of working
+                </h2>
+              </div>
+              <div class="flex justify-between items-center text-cyan-800">
+                <p class="font-semibold">GET E-BOOK</p>
+                <ion-icon
+                  class="text-xl"
+                  name="arrow-forward-outline"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </article>
+    </main>
+    <div class="mb-16 relative py-20 px-4 overflow-hidden">
+      <div
+        class="absolute -top-1/2 left-1/2 -translate-x-1/2 h-[620px] w-[620px] bg-brand rounded-full -z-50"
+      ></div>
+      <h2 class="mb-10 text-3xl text-center text-white font-semibold">
+        Welcome to your new digital HQ
+      </h2>
+      <div
+        class="mb-4 py-4 bg-white text-brand text-center rounded-sm shrink cursor-pointer"
+      >
+        <a class="uppercase text-base font-semibold">Try for free</a>
+      </div>
+      <div
+        class="py-4 mb-4 bg-brand text-white text-center rounded-sm shrink-b cursor-pointer border border-white"
+      >
+        <a class="uppercase text-base font-semibold">Talk to Sales</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mb-10 ml-4 inline-block">
+        <a href="#">
+          <img class="w-16" src="img/slack.svg" alt="slack logo" />
+        </a>
+      </div>
+
+      <div
+        class="mb-4 pb-4 mx-4 text-base font-semibold flex flex-col gap-4 border-b-2"
+      >
+        <div class="flex justify-between">
+          <p>WHY SLACK?</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="flex justify-between">
+          <p>PRODUCT</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="flex justify-between">
+          <p>PRICING</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="flex justify-between">
+          <p>RESOURCES</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div class="flex justify-between">
+          <p>COMPANY</p>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="mb-4 mx-4 text-base font-semibold flex flex-col gap-4">
+        <div>
+          <p>Status</p>
+        </div>
+        <div>
+          <p>Privacy</p>
+        </div>
+        <div>
+          <p>Terms</p>
+        </div>
+        <div>
+          <p>Cookie Preferences</p>
+        </div>
+        <div>
+          <p>Contact Us</p>
+        </div>
+        <div>
+          <p class="flex items-center gap-1">
+            <ion-icon name="globe-outline"></ion-icon> Change Region
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </p>
+        </div>
+        <div class="text-cyan-800">
+          <p class="flex items-center gap-1">
+            <ion-icon name="cloud-download-outline"></ion-icon> Download Slack
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="mb-4 mx-4 flex justify-between text-2xl">
+        <div class="hover:text-cyan-800">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </div>
+        <div class="hover:text-cyan-800">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </div>
+        <div class="hover:text-cyan-800">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </div>
+        <div class="hover:text-cyan-800">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </div>
+      </div>
+
+      <p class="mb-4 mx-4 text-xs">
+        ©2022 Slack Technologies, LLC, a Salesforce company. All rights
+        reserved. Various trademarks held by their respective owners.
+      </p>
+    </footer>
+
+    <!-- ****** Javascript Icons ******* -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- ****** Javascript ******* -->
+    <script src="myscripts.js"></script>
+  </body>
+</html>
